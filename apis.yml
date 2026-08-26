@@ -1,17 +1,30 @@
 aid: seaport-therapeutics
 name: Seaport Therapeutics
-description: 'Seaport Therapeutics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'Seaport Therapeutics is a Boston-based clinical-stage biopharmaceutical company developing
+  new medicines for patients with depression, anxiety and other neuropsychiatric disorders. Its proprietary
+  Glyph platform — licensed from the Porter Research Group at Monash University — applies lymphatic-targeting
+  oral prodrug chemistry so that more medicine reaches the bloodstream and brain while bypassing first-pass
+  liver metabolism and reducing side effects. The clinical pipeline includes GlyphAllo (SPT-300), an oral
+  allopregnanolone prodrug in Phase 2 for major depressive disorder; GlyphAgo (SPT-320), an oral agomelatine
+  prodrug in Phase 2 for generalized anxiety disorder; and Glyph2BLSD (SPT-348), a pre-clinical
+  non-hallucinogenic 2-bromo-LSD neuroplastogen. Seaport publishes no public API, developer portal, SDK
+  or machine-readable specification; its public web surface is a corporate WordPress site plus a hosted
+  investor-relations subdomain.'
 url: https://raw.githubusercontent.com/api-evangelist/seaport-therapeutics/refs/heads/main/apis.yml
+image: https://seaporttx.com/wp-content/uploads/2023/11/seaport_logo.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Biotechnology
+- Pharmaceuticals
+- Life Sciences
+- Clinical Trials
+- Neuroscience
+- Drug Delivery
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +32,36 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/seaport-therapeutics-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/seaport-therapeutics_stock/
+  url: https://seaporttx.com/
+- type: PrivacyPolicy
+  url: https://seaporttx.com/privacy-policy/
+- type: TermsOfService
+  url: https://seaporttx.com/terms-of-use/
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Seaport Therapeutics is a clinical-stage neuropsychiatric drug developer whose product is the
+    Glyph oral-prodrug platform, not software; seaporttx.com is a corporate WordPress site that
+    returns a real 404 on every OpenAPI, GraphQL, llms.txt and /.well-known/ path, and its only
+    machine-readable document is the WordPress core /wp-json/ discovery index that ships with the CMS.
+  evidence:
+  - url: https://seaporttx.com/openapi.json
+    status: 404
+  - url: https://seaporttx.com/llms.txt
+    status: 404
+  - url: https://seaporttx.com/.well-known/agent-card.json
+    status: 404
+  - url: https://seaporttx.com/wp-json/
+    status: 200
+  - url: https://investors.seaporttx.com/
+    status: 000
+  checked: '2026-08-26'

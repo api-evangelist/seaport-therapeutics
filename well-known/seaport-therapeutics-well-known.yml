@@ -1,0 +1,70 @@
+generated: '2026-08-26'
+method: probed
+source: live GET probes of /.well-known/* on every host named in apis.yml
+hit_count: 0
+note: >-
+  Every /.well-known/ path probed on seaporttx.com returned a real HTTP 404 (the WordPress
+  theme 404 page, ~48KB of HTML, or the web-server 404 for paths the CMS never sees) — this
+  host is not a soft-404 catch-all, it genuinely serves nothing at these paths. No WellKnown
+  or SecurityTxt pointer is emitted in apis.yml, because nothing was served. The investor
+  relations host investors.seaporttx.com could not be probed at all: every request, on HTTP/2
+  and HTTP/1.1, terminated with an INTERNAL_ERROR stream reset from the CDN, so its
+  /.well-known/ surface is unknown rather than absent. The only machine-readable document
+  found anywhere on the corporate host is https://seaporttx.com/wp-json/ (HTTP 200,
+  application/json, ~299KB) — the WordPress core REST API discovery index that ships with the
+  CMS, not an API Seaport Therapeutics designed, documents or supports. It is recorded here
+  for provenance and is deliberately NOT registered as an API in apis.yml.
+hosts:
+- host: https://seaporttx.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://investors.seaporttx.com
+  documents:
+  - path: /.well-known/security.txt
+    status: <no response>
+    note: 'curl 92 — HTTP/2 stream reset by the CDN; retried once on HTTP/1.1, same result'
+  - path: /.well-known/agent-card.json
+    status: <no response>
+  - path: /.well-known/agent.json
+    status: <no response>
+contract_discovery:
+  note: >-
+    STEP 0b contract discovery run against the corporate host; no OpenAPI, Swagger, GraphQL,
+    MCP or A2A surface exists. No agent card was found, so no a2a/ artifact was written.
+  probes:
+  - url: https://seaporttx.com/openapi.json
+    status: 404
+  - url: https://seaporttx.com/openapi.yaml
+    status: 404
+  - url: https://seaporttx.com/swagger.json
+    status: 404
+  - url: https://seaporttx.com/v1/openapi.json
+    status: 404
+  - url: https://seaporttx.com/api-docs
+    status: 404
+  - url: https://seaporttx.com/docs
+    status: 404
+  - url: https://seaporttx.com/redoc
+    status: 404
+  - url: https://seaporttx.com/graphql
+    status: 404
+  - url: https://seaporttx.com/llms.txt
+    status: 404
+  - url: https://seaporttx.com/apis.json
+    status: 404
+  - url: https://seaporttx.com/wp-json/
+    status: 200
+    note: WordPress core REST discovery index — generic CMS infrastructure, not a Seaport API product
