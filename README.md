@@ -64,5 +64,81 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Seaport Therapeutics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/seaport-therapeutics_stock/
+Seaport Therapeutics is a Boston-based clinical-stage biopharmaceutical company developing new medicines for patients with depression, anxiety and other neuropsychiatric disorders. Its proprietary Glyph platform — licensed from the Porter Research Group at Monash University — applies lymphatic-targeting oral prodrug chemistry so that more medicine reaches the bloodstream and brain while bypassing first-pass liver metabolism and reducing side effects. The clinical pipeline includes GlyphAllo (SPT-300), an oral allopregnanolone prodrug in Phase 2 for major depressive disorder; GlyphAgo (SPT-320), an oral agomelatine prodrug in Phase 2 for generalized anxiety disorder; and Glyph2BLSD (SPT-348), a pre-clinical non-hallucinogenic 2-bromo-LSD neuroplastogen. Seaport publishes no public API, developer portal, SDK or machine-readable specification; its public web surface is a corporate WordPress site plus a hosted investor-relations subdomain.
+
+**Areas:** Company · Biotechnology · Pharmaceuticals · Life Sciences · Clinical Trials · Neuroscience · Drug Delivery
+
+## Seaport Therapeutics on APIs.io
+
+Everything profiled for Seaport Therapeutics is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/seaport-therapeutics/](https://apis.io/providers/seaport-therapeutics/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Seaport Therapeutics Domain Security](https://apis.io/security/seaport-therapeutics/seaport-therapeutics-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://seaporttx.com/)
+- [Terms of service](https://seaporttx.com/terms-of-use/)
+- [Privacy policy](https://seaporttx.com/privacy-policy/)
+
+## API Evangelist rating
+
+**Kin Score 8.9** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 21.1 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.9** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/seaport-therapeutics/](https://apis.io/providers/seaport-therapeutics/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Seaport Therapeutics: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/seaport-therapeutics/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
